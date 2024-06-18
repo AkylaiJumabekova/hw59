@@ -1,5 +1,6 @@
 import React from 'react';
 import { Movie } from '../../types';
+import '../../containers/App.css';
 
 interface Props {
     movie: Movie;
@@ -9,7 +10,7 @@ interface Props {
 
 const MovieItem: React.FC<Props> = ({ movie, updateMovie, deleteMovie }) => {
     return (
-        <div>
+        <div className="MovieItem">
             <input
                 type="text"
                 value={movie.title}

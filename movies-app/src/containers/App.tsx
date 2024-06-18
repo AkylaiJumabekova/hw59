@@ -33,7 +33,7 @@ const App: React.FC = () => {
           value={newMovieTitle}
           onChange={(e) => setNewMovieTitle(e.target.value)}
         />
-        <button onClick={addMovie}>Add</button>
+        <button className="add-button" onClick={addMovie}>Add</button>
       </div>
       <div>
         {movies.map(movie => (

@@ -5,3 +5,53 @@
 input {
     margin-right: 10px;
 }
+
+.MovieItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.MovieItem input {
+    width: 450px;
+    margin-right: 10px;
+    border: 2px solid #00f;
+    font-weight: bold;
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+.MovieItem button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: #00f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #0000cc;
+}
+
+.add-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-movie input {
+    width: 450px;
+    border: 2px solid #00f;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+}
