@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import MovieItem from './components/MovieItem/MovieItem';
-import { Movie } from './types';
+import MovieItem from '../components/MovieItem/MovieItem';
+import { Movie } from '../types';
+import './App.css';
 
 const App: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -17,6 +18,10 @@ const App: React.FC = () => {
 
   const updateMovie = (id: string, title: string) => {
     setMovies(movies.map(movie => movie.id === id ? { ...movie, title } : movie));
+  };
+
+  const deleteMovie = (id: string) => {
+    setMovies(movies.filter(movie => movie.id !== id));
   };
 
   return (
@@ -36,6 +41,7 @@ const App: React.FC = () => {
             key={movie.id}
             movie={movie}
             updateMovie={updateMovie}
+            deleteMovie={deleteMovie}
           />
         ))}
       </div>
