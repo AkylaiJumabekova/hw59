@@ -19,8 +19,6 @@ input {
     border: 2px solid #00f;
     font-weight: bold;
     text-align: center;
-    background-color: blue;
-    color: white;
 }
 
 .MovieItem button {
@@ -54,4 +52,21 @@ input {
     font-weight: bold;
     text-align: center;
     margin-right: 10px;
+}
+
+.fetch-jokes-button {
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.fetch-jokes-button:hover {
+    background-color: green;
+}
+
+.jokes-list {
+    margin-top: 20px;
 }
