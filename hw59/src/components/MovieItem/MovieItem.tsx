@@ -1,6 +1,6 @@
 import React from 'react';
-import { Movie } from '../../../types';
-import '../../../containers/Movies.css';
+import { Movie } from '../../types';
+import '../../../src/containers/App.css';
 
 interface Props {
   movie: Movie;
