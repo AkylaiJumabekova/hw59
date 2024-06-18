@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieItem from '../components/first task/MovieItem/MovieItem';
 import { Movie } from '../types';
-import './App.css';
+import './Movies.css';
 
 const App: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>(() => {
