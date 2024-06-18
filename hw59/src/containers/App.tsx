@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import MovieItem from '../components/MovieItem/MovieItem';
+import React, { useState, useEffect } from 'react';
+import MovieItem from '../components/first task/MovieItem/MovieItem';
 import { Movie } from '../types';
 import './App.css';
 
 const App: React.FC = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<Movie[]>(() => {
+    const savedMovies = localStorage.getItem('movies');
+    return savedMovies ? JSON.parse(savedMovies) : [];
+  });
   const [newMovieTitle, setNewMovieTitle] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('movies', JSON.stringify(movies));
+  }, [movies]);
 
   const addMovie = () => {
     const newMovie: Movie = {
@@ -27,7 +34,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h1>Movie Tracker</h1>
-      <div>
+      <div className="add-movie">
         <input
           type="text"
           value={newMovieTitle}
